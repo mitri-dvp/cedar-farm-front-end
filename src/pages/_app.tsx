@@ -13,7 +13,21 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico"></link>
-        <title>Social Menez</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+        <title>Cedar Farm</title>
       </Head>
       {routes.includes(pathname) ? (
         <Component {...pageProps} />

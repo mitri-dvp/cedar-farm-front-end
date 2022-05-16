@@ -4,15 +4,70 @@
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 10;
-  background-color: #fff;
+  background-color: darken(#44a347, $amount: 15);
+
+  .logo {
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 50%;
+    border: 0.2rem solid darken(#44a347, $amount: 15);
+    transform: translateY(2rem);
+  }
+
+  button,
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: darken(#44a347, $amount: 15);
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 0px 7px #231f2050, -3px 0px 7px #231f2050,
+      0px 4px 7px #231f2050;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: #44a347;
+    }
+  }
+
+  .main_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1024px;
+    height: 5rem;
+    margin: auto;
+    padding: 0 2rem;
+  }
+
+  .dropdown {
+    position: relative;
+
+    ul {
+      position: absolute;
+      border: 1px solid #fff;
+      display: grid;
+      right: 0;
+      bottom: 0rem;
+      transform: translateY(100%);
+      animation: fade-in 0.2s ease-in-out;
+
+      a {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
 }
 
-.body {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  max-width: 1024px;
-  height: 5rem;
-  margin: auto;
-  padding: 0 2rem;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
