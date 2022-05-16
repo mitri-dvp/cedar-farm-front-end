@@ -10,8 +10,18 @@ const Footer = () => {
       <div>
         <div className={styles.content}>
           <div className={styles.logos}>
-            <Image src={'/white-dorpers-logo.png'} width={148} height={100} />
-            <Image src={'/4h-emblem.svg'} width={100} height={100} />
+            <Image
+              src={'/white-dorpers-logo.png'}
+              width={148}
+              height={100}
+              alt="white-dorpers-logo"
+            />
+            <Image
+              src={'/4h-emblem.svg'}
+              width={100}
+              height={100}
+              alt="4h-emblem"
+            />
           </div>
           <div className={styles.contact}>
             <h1>Contact Info</h1>

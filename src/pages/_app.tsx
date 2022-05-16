@@ -28,6 +28,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
         <title>Cedar Farm</title>
+        <meta
+          name="description"
+          content="Black Angus Breeder, Dorper Sheep Breeder,🌱 Raised with Care and Integrity."
+        />
       </Head>
       {routes.includes(pathname) ? (
         <Component {...pageProps} />

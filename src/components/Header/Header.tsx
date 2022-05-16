@@ -15,7 +15,12 @@ export default function Header() {
       <nav>
         <ul className={styles.main_list}>
           <li className={styles.logo}>
-            <Image src={'/logo.png'} width={100} height={100} />
+            <Image
+              src={'/logo.png'}
+              width={100}
+              height={100}
+              alt="cedar-farm-logo"
+            />
           </li>
           <li>
             <Link href="/">
