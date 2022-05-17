@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 import styles from './Header.module.scss'
 import Image from 'next/image'
 
-export default function Header() {
-  const { pathname } = useRouter()
-
+const Header: FC = () => {
   const [showDropdownList, setShowDropdownList] = useState(false)
 
   return (
@@ -24,19 +21,16 @@ export default function Header() {
           </li>
           <li>
             <Link href="/">
-              <a className={pathname === '/' ? styles.active : ''}>Home</a>
+              <a>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <a className={pathname === '/sires' ? styles.active : ''}>
-                Sires
-              </a>
+            <Link href="/sires">
+              <a>Sires</a>
             </Link>
           </li>
           <li className={styles.dropdown}>
             <button
-              className={pathname.includes('/sheeps') ? styles.active : ''}
               onClick={() => setShowDropdownList(!showDropdownList)}
               onMouseEnter={() => setShowDropdownList(true)}
               onMouseLeave={() => setShowDropdownList(false)}
@@ -59,7 +53,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/sheeps/commercial">
+                  <Link href="/sheeps/commercial-sheeps">
                     <a>Commercial</a>
                   </Link>
                 </li>
@@ -67,12 +61,12 @@ export default function Header() {
             )}
           </li>
           <li>
-            <Link href="/about">
+            <Link href="/angus-cows">
               <a>Angus Cows</a>
             </Link>
           </li>
           <li>
-            <Link href="/about">
+            <Link href="/contact">
               <a>Contact Us</a>
             </Link>
           </li>
@@ -81,3 +75,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header

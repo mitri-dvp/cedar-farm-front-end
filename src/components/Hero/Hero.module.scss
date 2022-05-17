@@ -2,4 +2,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4f4f4;
+  padding-top: 5rem;
+
+  > div {
+    max-width: 1024px;
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+    display: grid;
+    gap: 2rem;
+
+    > h1 {
+      padding-bottom: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+
+    .featured_list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 100%;
+      margin: 2rem 0;
+      margin-bottom: 3rem;
+
+      .entry {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+
+        img {
+          border-radius: 50%;
+          border: 2px solid darken(#ffffff, 100) !important;
+        }
+
+        h1,
+        p {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }

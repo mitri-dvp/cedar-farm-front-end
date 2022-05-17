@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  top: 0;
+  background-color: #f4f4f4;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  padding-bottom: 5rem;
+
+  > div {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 2rem;
+    display: grid;
+    gap: 2rem;
+
+    .card {
+      background-color: darken(#44a347, $amount: 15);
+      padding: 2rem;
+      min-height: 500px;
+      border-radius: 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}

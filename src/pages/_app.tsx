@@ -27,6 +27,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+          rel="stylesheet"
+        />
         <title>Cedar Farm</title>
         <meta
           name="description"

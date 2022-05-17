@@ -1,10 +1,11 @@
+import React, { FC } from 'react'
+
 import { InstagramSVG, PhoneSVG } from '@components/SVG'
 import Image from 'next/image'
-import React from 'react'
 
 import styles from './Footer.module.scss'
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className={styles.container}>
       <div>
@@ -47,6 +48,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.address}>
+            <h1>Our Address</h1>
             133 Mt Willing Rd, <br />
             Saluda, SC 29138.
           </div>
