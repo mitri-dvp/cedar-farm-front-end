@@ -1,0 +1,59 @@
+.container {
+  max-width: 560px;
+  margin: auto;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    label {
+      cursor: pointer;
+      width: calc(50% - 0.5rem);
+
+      &:last-child {
+        width: 100%;
+      }
+
+      span {
+        text-transform: uppercase;
+        width: max-content;
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+      }
+
+      textarea,
+      input {
+        width: 100%;
+        font-family: inherit;
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: inherit;
+
+    background-color: darken(#44a347, $amount: 15);
+    text-shadow: 3px 0px 2px #231f2050, -3px 0px 2px #231f2050,
+      0px 4px 2px #231f2050;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+  }
+}

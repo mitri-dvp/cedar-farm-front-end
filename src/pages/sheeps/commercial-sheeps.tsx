@@ -1,39 +1,54 @@
 import { NextPage } from 'next'
-import ProductList from '@components/ProductList'
+import Products from '@components/Products'
 
-const defaultCommercialSheep: Product[] = [
+const defaultCommercialSheep: CommercialSheep[] = [
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/01.jpg',
+    pictures: ['https://kjhdorpersheep.com/images/2019/01.jpg'],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/01.jpg',
+    pictures: ['https://kjhdorpersheep.com/images/2019/01.jpg'],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/01.jpg',
+    pictures: ['https://kjhdorpersheep.com/images/2019/01.jpg'],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/01.jpg',
+    pictures: ['https://kjhdorpersheep.com/images/2019/01.jpg'],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/01.jpg',
+    pictures: ['https://kjhdorpersheep.com/images/2019/01.jpg'],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   }
@@ -42,10 +57,7 @@ const defaultCommercialSheep: Product[] = [
 const About: NextPage = () => {
   return (
     <>
-      <ProductList
-        title="Commercial Dorper Sheep For Sale"
-        products={defaultCommercialSheep}
-      />
+      <Products.CommercialSheeps.List sheeps={defaultCommercialSheep} />
     </>
   )
 }

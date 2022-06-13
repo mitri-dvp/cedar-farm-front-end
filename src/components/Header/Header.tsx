@@ -31,7 +31,7 @@ const Header: FC = () => {
           </li>
           <li className={styles.dropdown}>
             <button
-              onClick={() => setShowDropdownList(!showDropdownList)}
+              onClick={() => setShowDropdownList(true)}
               onMouseEnter={() => setShowDropdownList(true)}
               onMouseLeave={() => setShowDropdownList(false)}
             >

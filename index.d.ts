@@ -1,39 +1,49 @@
-type Sire = {
+type AngusCow = {
   id: string
-  image: string
+  pictures: string[]
   name: string
+  price: number
+  dateOfBirth: string
+  weight: number
   description: string
-  image: string
-}
-
-type Ram = {
-  id: string
-  image: string
-  name: string
-  description: string
-  image: string
-}
-
-type Ewe = {
-  id: string
-  image: string
-  name: string
-  description: string
-  image: string
 }
 
 type CommercialSheep = {
   id: string
-  image: string
+  pictures: string[]
   name: string
+  price: number
+  dateOfBirth: string
+  weight: number
   description: string
-  image: string
 }
 
-type Product = {
+type Ewe = {
   id: string
-  image: string
+  pictures: string[]
   name: string
+  price: number
+  dateOfBirth: string
+  weight: number
   description: string
-  image: string
+}
+
+type Ram = {
+  id: string
+  pictures: string[]
+  name: string
+  price: number
+  dateOfBirth: string
+  weight: number
+  description: string
+}
+
+type Sire = {
+  id: string
+  pictures: string[]
+  name: string
+  price: number
+  dateOfBirth: string
+  weight: number
+  description: string
 }

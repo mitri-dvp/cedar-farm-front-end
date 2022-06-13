@@ -1,22 +1,22 @@
 import Image from 'next/image'
 import { FC } from 'react'
 
-import styles from './ProductCard.module.scss'
+import styles from './RamsDetails.module.scss'
 
-const ProductCard: FC<{ product: Sire }> = ({ product }) => {
+const RamsDetails: FC<{ ram: Ram }> = ({ ram }) => {
   return (
     <div className={styles.card}>
       <Image
-        src={product.image}
+        src={ram.pictures[0]}
         layout="responsive"
         width={0}
         height={0}
         objectFit="cover"
       />
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
+      <h1>{ram.name}</h1>
+      <p>{ram.description}</p>
     </div>
   )
 }
 
-export default ProductCard
+export default RamsDetails

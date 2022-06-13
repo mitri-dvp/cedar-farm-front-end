@@ -1,10 +1,12 @@
 import { NextPage } from 'next'
 import Products from '@components/Products'
 
-const defaultSires: Sire[] = [
+const defaultCows: AngusCow[] = [
   {
     id: new Date().toString(),
-    pictures: ['https://kjhdorpersheep.com/images/sires/indy_sm.jpg'],
+    pictures: [
+      'https://www.agdaily.com/wp-content/uploads/2020/04/bg-black_angus-001-JAndrewPatronik.jpg'
+    ],
     name: 'Steve',
     price: 10.99,
     dateOfBirth: 'YYYY-MM-DD',
@@ -14,7 +16,9 @@ const defaultSires: Sire[] = [
   },
   {
     id: new Date().toString(),
-    pictures: ['https://kjhdorpersheep.com/images/sires/indy_sm.jpg'],
+    pictures: [
+      'https://www.agdaily.com/wp-content/uploads/2020/04/bg-black_angus-001-JAndrewPatronik.jpg'
+    ],
     name: 'Steve',
     price: 10.99,
     dateOfBirth: 'YYYY-MM-DD',
@@ -24,7 +28,9 @@ const defaultSires: Sire[] = [
   },
   {
     id: new Date().toString(),
-    pictures: ['https://kjhdorpersheep.com/images/sires/indy_sm.jpg'],
+    pictures: [
+      'https://www.agdaily.com/wp-content/uploads/2020/04/bg-black_angus-001-JAndrewPatronik.jpg'
+    ],
     name: 'Steve',
     price: 10.99,
     dateOfBirth: 'YYYY-MM-DD',
@@ -34,7 +40,9 @@ const defaultSires: Sire[] = [
   },
   {
     id: new Date().toString(),
-    pictures: ['https://kjhdorpersheep.com/images/sires/indy_sm.jpg'],
+    pictures: [
+      'https://www.agdaily.com/wp-content/uploads/2020/04/bg-black_angus-001-JAndrewPatronik.jpg'
+    ],
     name: 'Steve',
     price: 10.99,
     dateOfBirth: 'YYYY-MM-DD',
@@ -44,7 +52,9 @@ const defaultSires: Sire[] = [
   },
   {
     id: new Date().toString(),
-    pictures: ['https://kjhdorpersheep.com/images/sires/indy_sm.jpg'],
+    pictures: [
+      'https://www.agdaily.com/wp-content/uploads/2020/04/bg-black_angus-001-JAndrewPatronik.jpg'
+    ],
     name: 'Steve',
     price: 10.99,
     dateOfBirth: 'YYYY-MM-DD',
@@ -54,12 +64,12 @@ const defaultSires: Sire[] = [
   }
 ]
 
-const Sires: NextPage = () => {
+const AngusCows: NextPage = () => {
   return (
     <>
-      <Products.Sires.List sires={defaultSires} />
+      <Products.AngusCows.List cows={defaultCows} />
     </>
   )
 }
 
-export default Sires
+export default AngusCows

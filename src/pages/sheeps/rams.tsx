@@ -1,39 +1,64 @@
 import { NextPage } from 'next'
-import ProductList from '@components/ProductList'
+import Products from '@components/Products'
 
 const defaultRams: Ram[] = [
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/1910.jpg',
+    pictures: [
+      'https://kjhdorpersheep.com/images/2019/08-02-19/Untitled-1.png'
+    ],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/1910.jpg',
+    pictures: [
+      'https://kjhdorpersheep.com/images/2019/08-02-19/Untitled-1.png'
+    ],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/1910.jpg',
+    pictures: [
+      'https://kjhdorpersheep.com/images/2019/08-02-19/Untitled-1.png'
+    ],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/1910.jpg',
+    pictures: [
+      'https://kjhdorpersheep.com/images/2019/08-02-19/Untitled-1.png'
+    ],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   },
   {
     id: new Date().toString(),
-    image: 'https://kjhdorpersheep.com/images/2019/1910.jpg',
+    pictures: [
+      'https://kjhdorpersheep.com/images/2019/08-02-19/Untitled-1.png'
+    ],
     name: 'Steve',
+    price: 10.99,
+    dateOfBirth: 'YYYY-MM-DD',
+    weight: 50,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem impedit dolorem tempore iure quae minus aperiam doloremque, error facere totam iusto natus enim nobis ea at aut, debitis, in quis?'
   }
@@ -42,7 +67,7 @@ const defaultRams: Ram[] = [
 const About: NextPage = () => {
   return (
     <>
-      <ProductList title="Dorper Rams For Sale" products={defaultRams} />
+      <Products.Rams.List rams={defaultRams} />
     </>
   )
 }

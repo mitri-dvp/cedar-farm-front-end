@@ -2,13 +2,9 @@ import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 
 import Layout from '@components/Layout'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { pathname } = useRouter()
-  const routes = ['/_error']
-
   return (
     <>
       <Head>
@@ -37,13 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Black Angus Breeder, Dorper Sheep Breeder,🌱 Raised with Care and Integrity."
         />
       </Head>
-      {routes.includes(pathname) ? (
+      <Layout>
         <Component {...pageProps} />
-      ) : (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      )}
+      </Layout>
     </>
   )
 }
