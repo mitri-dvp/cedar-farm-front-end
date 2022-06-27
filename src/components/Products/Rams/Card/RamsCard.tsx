@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import { FC } from 'react'
 
 import styles from './RamsCard.module.scss'
 
-const RamsCard: FC<{ ram: Ram }> = ({ ram }) => {
+const RamsCard: React.FC<{ ram: Ram }> = ({ ram }) => {
   return (
     <div className={styles.card}>
       <Image

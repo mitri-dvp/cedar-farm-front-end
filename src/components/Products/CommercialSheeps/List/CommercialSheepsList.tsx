@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import Products from '@components/Products'
 
 import styles from './CommercialSheepsList.module.scss'

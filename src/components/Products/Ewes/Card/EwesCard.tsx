@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import { FC } from 'react'
 
 import styles from './EwesCard.module.scss'
 
-const EwesCard: FC<{ ewe: Ewe }> = ({ ewe }) => {
+const EwesCard: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
   return (
     <div className={styles.card}>
       <Image

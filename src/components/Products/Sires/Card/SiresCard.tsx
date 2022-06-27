@@ -1,21 +1,25 @@
+import { getStrapiMedia } from '@lib/media'
 import Image from 'next/image'
-import { FC } from 'react'
+import Link from 'next/link'
 
 import styles from './SiresCard.module.scss'
 
-const SiresCard: FC<{ sire: Sire }> = ({ sire }) => {
+const SiresCard: React.FC<{ sire: Sire }> = ({ sire }) => {
+  console.log(sire.attributes.pictures.data)
   return (
-    <div className={styles.card}>
-      <Image
-        src={sire.pictures[0]}
-        layout="responsive"
-        width={0}
-        height={0}
-        objectFit="cover"
-      />
-      <h1>{sire.name}</h1>
-      <p>{sire.description}</p>
-    </div>
+    <Link href={`/sires/${sire.attributes.slug}`}>
+      <a className={styles.card}>
+        <Image
+          src={getStrapiMedia(sire.attributes.pictures.data, 0)}
+          layout="responsive"
+          width={0}
+          height={0}
+          objectFit="cover"
+        />
+        <h1>{sire.attributes.name}</h1>
+        <p>{sire.attributes.description}</p>
+      </a>
+    </Link>
   )
 }
 

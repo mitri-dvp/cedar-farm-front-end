@@ -1,27 +1,72 @@
-.card {
+.container {
   background-color: darken(#ffffff, 10);
   padding: 2rem;
   color: #231f20;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
-  img {
-    border-radius: 50%;
-    border: 2px solid darken(#ffffff, 100) !important;
+  main {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      span {
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+
+    .main_image {
+      img {
+        border: 2px solid darken(#ffffff, 100) !important;
+        background-color: #fff;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        font-weight: normal;
+      }
+    }
   }
 
-  h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
+  .pictures_list {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 4rem;
+    width: 100%;
 
-  p {
-    font-weight: normal;
+    display: flex;
+    gap: 1rem;
+
+    > div {
+      width: 100%;
+      height: auto;
+
+      img {
+        border: 2px solid darken(#ffffff, 100) !important;
+        background-color: #fff;
+      }
+    }
   }
 }

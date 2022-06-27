@@ -1,49 +1,55 @@
-type AngusCow = {
-  id: string
-  pictures: string[]
+/* eslint-disable camelcase */
+type PictureAttributes = {
   name: string
-  price: number
-  dateOfBirth: string
-  weight: number
-  description: string
+  alternativeText: string
+  caption: string
+  width: number
+  height: number
+  formats: object // To-Do: Add formats type
+  hash: string
+  ext: string
+  mime: string
+  size: number
+  url: string
+  previewUrl: null | string // Note: Type assumption
+  provider: string
+  provider_metadata: null | string // Note: Type assumption
+  createdAt: string
+  updatedAt: string
 }
 
-type CommercialSheep = {
+type Picture = {
   id: string
-  pictures: string[]
-  name: string
-  price: number
-  dateOfBirth: string
-  weight: number
-  description: string
+  attributes: PictureAttributes
 }
 
-type Ewe = {
-  id: string
-  pictures: string[]
-  name: string
-  price: number
-  dateOfBirth: string
-  weight: number
-  description: string
+type ProductPictures = {
+  data: null | Picture[]
 }
 
-type Ram = {
-  id: string
-  pictures: string[]
+type ProductAttributes = {
+  uid: string
+  pictures: ProductPictures
   name: string
+  slug: string
   price: number
   dateOfBirth: string
   weight: number
   description: string
+  sold: boolean
 }
 
-type Sire = {
+type Product = {
   id: string
-  pictures: string[]
-  name: string
-  price: number
-  dateOfBirth: string
-  weight: number
-  description: string
+  attributes: ProductAttributes
 }
+
+type APIResponse = {
+  data: Product[]
+}
+
+type AngusCow = Product
+type CommercialSheep = Product
+type Ewe = Product
+type Ram = Product
+type Sire = Product

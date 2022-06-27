@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import Rams from '@components/Products/Rams'
 
 import styles from './RamsList.module.scss'
 
-const RamsList: FC<{ rams: Ram[] }> = ({ rams }) => {
+const RamsList: React.FC<{ rams: Ram[] }> = ({ rams }) => {
   return (
     <section className={styles.container}>
       <h1>Dorper Rams For Sale</h1>
