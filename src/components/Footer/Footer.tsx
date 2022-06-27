@@ -1,5 +1,3 @@
-
-
 import { InstagramSVG, PhoneSVG } from '@components/SVG'
 import Image from 'next/image'
 

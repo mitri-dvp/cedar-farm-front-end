@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-
 import styles from './Error.module.scss'
 
 const Error: React.FC = () => {
