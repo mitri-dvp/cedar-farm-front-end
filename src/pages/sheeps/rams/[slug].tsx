@@ -9,6 +9,9 @@ const RamsDetails: React.FC<{ ram: Ram }> = ({ ram }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const rams: APIResponse = await fetchAPI('/api/rams', '&populate=*')
+
+  console.log('rams', rams)
+
   return {
     paths: rams.data.map((ram: Ram) => ({
       params: { slug: ram.attributes.slug, id: ram.id }
@@ -28,6 +31,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `/api/rams`,
     `&populate=*` + `&filters[slug][$eq]=${slug}`
   )
+
+  console.log('ram', ram)
+
   return {
     props: {
       ram: ram.data[0]

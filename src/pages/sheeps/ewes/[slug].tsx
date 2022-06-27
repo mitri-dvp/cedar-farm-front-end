@@ -9,6 +9,9 @@ const EwesDetails: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const ewes: APIResponse = await fetchAPI('/api/ewes', '&populate=*')
+
+  console.log('ewes', ewes)
+
   return {
     paths: ewes.data.map((ewe: Ewe) => ({
       params: { slug: ewe.attributes.slug, id: ewe.id }
@@ -28,6 +31,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `/api/ewes`,
     `&populate=*` + `&filters[slug][$eq]=${slug}`
   )
+
+  console.log('ewe', ewe)
+
   return {
     props: {
       ewe: ewe.data[0]

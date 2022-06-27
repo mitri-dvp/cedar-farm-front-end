@@ -14,6 +14,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     '/api/commercial-sheeps',
     '&populate=*'
   )
+
+  console.log('sheeps', sheeps)
+
   return {
     paths: sheeps.data.map((sheep: CommercialSheep) => ({
       params: { slug: sheep.attributes.slug, id: sheep.id }
@@ -33,6 +36,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `/api/commercial-sheeps`,
     `&populate=*` + `&filters[slug][$eq]=${slug}`
   )
+
+  console.log('sheep', sheep)
+
   return {
     props: {
       sheep: sheep.data[0]
