@@ -5,12 +5,11 @@ import Link from 'next/link'
 import styles from './SiresCard.module.scss'
 
 const SiresCard: React.FC<{ sire: Sire }> = ({ sire }) => {
-  console.log(sire.attributes.pictures.data)
   return (
     <Link href={`/sires/${sire.attributes.slug}`}>
       <a className={styles.card}>
         <Image
-          src={getStrapiMedia(sire.attributes.pictures.data, 0)}
+          src={getStrapiMedia(sire.attributes.pictures.data)}
           layout="responsive"
           width={0}
           height={0}

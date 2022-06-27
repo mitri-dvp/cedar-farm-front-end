@@ -1,20 +1,24 @@
+import { getStrapiMedia } from '@lib/media'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './EwesCard.module.scss'
 
 const EwesCard: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
   return (
-    <div className={styles.card}>
-      <Image
-        src={ewe.pictures[0]}
-        layout="responsive"
-        width={0}
-        height={0}
-        objectFit="cover"
-      />
-      <h1>{ewe.name}</h1>
-      <p>{ewe.description}</p>
-    </div>
+    <Link href={`/sheeps/ewes/${ewe.attributes.slug}`}>
+      <a className={styles.card}>
+        <Image
+          src={getStrapiMedia(ewe.attributes.pictures.data)}
+          layout="responsive"
+          width={0}
+          height={0}
+          objectFit="cover"
+        />
+        <h1>{ewe.attributes.name}</h1>
+        <p>{ewe.attributes.description}</p>
+      </a>
+    </Link>
   )
 }
 

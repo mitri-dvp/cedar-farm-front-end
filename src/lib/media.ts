@@ -1,7 +1,8 @@
 import { getStrapiURL } from './api'
 
 // Returns the correct URL from strapi media
-export function getStrapiMedia(media: null | Picture[], i: number) {
+export function getStrapiMedia(media: null | Picture[], i = 0) {
+  // By Default, displays the first picture of the list if any
   if (!media) {
     console.log('GET STRAPI MEDIA :: ERROR :: MEDIA IS NULL')
     return '/image.svg'

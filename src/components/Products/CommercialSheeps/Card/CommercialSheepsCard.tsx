@@ -1,4 +1,6 @@
+import { getStrapiMedia } from '@lib/media'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './CommercialSheepsCard.module.scss'
 
@@ -6,17 +8,19 @@ const CommercialSheepsCard: React.FC<{ sheep: CommercialSheep }> = ({
   sheep
 }) => {
   return (
-    <div className={styles.card}>
-      <Image
-        src={sheep.pictures[0]}
-        layout="responsive"
-        width={0}
-        height={0}
-        objectFit="cover"
-      />
-      <h1>{sheep.name}</h1>
-      <p>{sheep.description}</p>
-    </div>
+    <Link href={`/sheeps/commercial-sheeps/${sheep.attributes.slug}`}>
+      <a className={styles.card}>
+        <Image
+          src={getStrapiMedia(sheep.attributes.pictures.data)}
+          layout="responsive"
+          width={0}
+          height={0}
+          objectFit="cover"
+        />
+        <h1>{sheep.attributes.name}</h1>
+        <p>{sheep.attributes.description}</p>
+      </a>
+    </Link>
   )
 }
 

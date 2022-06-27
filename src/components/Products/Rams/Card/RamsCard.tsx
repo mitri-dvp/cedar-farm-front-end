@@ -1,20 +1,24 @@
+import { getStrapiMedia } from '@lib/media'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './RamsCard.module.scss'
 
 const RamsCard: React.FC<{ ram: Ram }> = ({ ram }) => {
   return (
-    <div className={styles.card}>
-      <Image
-        src={ram.pictures[0]}
-        layout="responsive"
-        width={0}
-        height={0}
-        objectFit="cover"
-      />
-      <h1>{ram.name}</h1>
-      <p>{ram.description}</p>
-    </div>
+    <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
+      <a className={styles.card}>
+        <Image
+          src={getStrapiMedia(ram.attributes.pictures.data)}
+          layout="responsive"
+          width={0}
+          height={0}
+          objectFit="cover"
+        />
+        <h1>{ram.attributes.name}</h1>
+        <p>{ram.attributes.description}</p>
+      </a>
+    </Link>
   )
 }
 

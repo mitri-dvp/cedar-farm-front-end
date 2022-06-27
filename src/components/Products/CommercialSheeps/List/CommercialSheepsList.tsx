@@ -2,7 +2,7 @@ import Products from '@components/Products'
 
 import styles from './CommercialSheepsList.module.scss'
 
-const CommercialSheepsList: FC<{
+const CommercialSheepsList: React.FC<{
   sheeps: CommercialSheep[]
 }> = ({ sheeps }) => {
   return (

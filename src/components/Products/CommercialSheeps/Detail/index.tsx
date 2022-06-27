@@ -1,1 +1,1 @@
-export { default } from './CommercialSheepsDetail'
+export { default } from './CommercialSheepsDetails'

@@ -51,7 +51,7 @@ const SiresDetails: React.FC<{ sire: Sire }> = ({ sire }) => {
         </div>
         <div className={styles.main_image}>
           <Image
-            src={getStrapiMedia(sire.attributes.pictures.data, 0)}
+            src={getStrapiMedia(sire.attributes.pictures.data)}
             layout="responsive"
             width={0}
             height={0}

@@ -5,13 +5,6 @@ export function getStrapiURL() {
 // Helper to make GET requests to Strapi
 export async function fetchAPI(path = '', params = '') {
   const url = getStrapiURL()
-  console.log(
-    url +
-      `${path}` +
-      `?key=${process.env.NEXT_PUBLIC_API_KEY}` +
-      `&sort[0]=id:asc` +
-      `&${params}`
-  )
   const res = await fetch(
     url +
       `${path}` +
