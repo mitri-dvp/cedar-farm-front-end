@@ -1,10 +1,9 @@
-
 import styles from './Contact.module.scss'
 
 import Form from '@components/Form'
 import { InstagramSVG, PhoneSVG } from '@components/SVG'
 
-const Contact: FC = () => {
+const Contact: React.FC = () => {
   return (
     <section className={styles.container}>
       <div>

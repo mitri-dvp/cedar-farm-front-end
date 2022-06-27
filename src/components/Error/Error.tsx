@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import React, { FC } from 'react'
+
 
 import styles from './Error.module.scss'
 
-const Error: FC = () => {
+const Error: React.FC = () => {
   return (
     <section className={styles.container}>
       <div>

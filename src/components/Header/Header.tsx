@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 
 import styles from './Header.module.scss'
 import Image from 'next/image'
 
-const Header: FC = () => {
+const Header: React.FC = () => {
   const [showDropdownList, setShowDropdownList] = useState(false)
 
   return (

@@ -1,8 +1,6 @@
-import React, { FC } from 'react'
-
 import styles from './About.module.scss'
 
-const About: FC = () => {
+const About: React.FC = () => {
   return (
     <section className={styles.container}>
       <div>

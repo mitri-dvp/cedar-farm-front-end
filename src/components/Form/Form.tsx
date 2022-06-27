@@ -2,7 +2,7 @@ import { useState, FC } from 'react'
 
 import styles from './Form.module.scss'
 
-const Form: FC = () => {
+const Form: React.FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')

@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+
 
 import { InstagramSVG, PhoneSVG } from '@components/SVG'
 import Image from 'next/image'
 
 import styles from './Footer.module.scss'
 
-const Footer: FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.container}>
       <div>

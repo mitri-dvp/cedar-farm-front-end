@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { FC } from 'react'
+
 import styles from './Hero.module.scss'
 
 const defaultFeaturesList = [
@@ -29,7 +29,7 @@ const defaultFeaturesList = [
   }
 ]
 
-const Hero: FC = () => {
+const Hero: React.FC = () => {
   return (
     <div className={styles.container}>
       <div>
