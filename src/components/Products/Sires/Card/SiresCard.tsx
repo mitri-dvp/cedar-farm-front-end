@@ -7,8 +7,8 @@ import styles from './SiresCard.module.scss'
 const SiresCard: React.FC<{ sire: Sire }> = ({ sire }) => {
   return (
     <div className={styles.card}>
-      {!sire.attributes.sold && (
-        <div className={styles.image_sold}>
+      {sire.attributes.sold && (
+        <div className={styles.sold_tag}>
           <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
         </div>
       )}
@@ -23,7 +23,11 @@ const SiresCard: React.FC<{ sire: Sire }> = ({ sire }) => {
           />
         </a>
       </Link>
-      <h1>{sire.attributes.name}</h1>
+      <h1 className={styles.name}>
+        <Link href={`/sires/${sire.attributes.slug}`}>
+          <a>{sire.attributes.name}</a>
+        </Link>
+      </h1>
       <h1>{sire.attributes.dateOfBirth}</h1>
       <h1>{sire.attributes.weight}lb</h1>
     </div>

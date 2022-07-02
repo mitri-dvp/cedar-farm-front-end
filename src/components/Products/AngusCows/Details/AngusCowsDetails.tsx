@@ -1,18 +1,29 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import dayjs from 'dayjs'
 
 import styles from './AngusCowsDetails.module.scss'
 
 import { getStrapiMedia } from '@lib/media'
+import Modal from '@components/Modal'
+import { CaretLeftSVG, CaretRightSVG } from '@components/SVG'
 
 const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
+  const [showModal, setShowModal] = useState(false)
+  const [selected, setSelected] = useState(0)
+
   const displayAdditionalPictures = () => {
     const pictures = []
     if (cow.attributes.pictures.data) {
       // Start on Index 1 since Main Image is displayed on the right column
       for (let i = 1; i < cow.attributes.pictures.data.length; i++) {
         pictures.push(
-          <div>
+          <div
+            onClick={() => {
+              setShowModal(true)
+              setSelected(i)
+            }}
+          >
             <Image
               src={getStrapiMedia(cow.attributes.pictures.data, i)}
               layout="responsive"
@@ -51,6 +62,10 @@ const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
         </div>
         <div className={styles.main_image}>
           <Image
+            onClick={() => {
+              setShowModal(true)
+              setSelected(0)
+            }}
             src={getStrapiMedia(cow.attributes.pictures.data)}
             layout="responsive"
             width={0}
@@ -62,6 +77,42 @@ const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
       <footer className={styles.pictures_list}>
         {displayAdditionalPictures()}
       </footer>
+      {cow.attributes.pictures.data && (
+        <Modal show={showModal} onHide={() => setShowModal(false)}>
+          <Image
+            src={getStrapiMedia(cow.attributes.pictures.data, selected)}
+            layout="responsive"
+            width={0}
+            height={0}
+            objectFit="cover"
+          />
+          <div className={styles.modal_buttons}>
+            <div
+              onClick={() => {
+                const n = selected - 1
+                if (n < 0) return
+                setSelected(n)
+              }}
+            >
+              <CaretLeftSVG />
+            </div>
+            <div
+              onClick={() => {
+                if (cow.attributes.pictures.data) {
+                  const n = selected + 1
+                  if (n > cow.attributes.pictures.data.length - 1) return
+                  setSelected(n)
+                }
+              }}
+            >
+              <CaretRightSVG />
+            </div>
+            <span>
+              {selected + 1} of {cow.attributes.pictures.data.length}
+            </span>
+          </div>
+        </Modal>
+      )}
     </div>
   )
 }

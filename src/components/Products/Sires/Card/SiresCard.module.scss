@@ -2,7 +2,7 @@
   background-color: darken(#ffffff, 0);
   color: #231f20;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-template-columns: 100px 6fr 2fr 1fr;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -18,7 +18,7 @@
     position: relative;
   }
 
-  .image_sold {
+  .sold_tag {
     top: 0;
     position: absolute;
     z-index: 1;
@@ -37,6 +37,11 @@
   h1 {
     font-size: 1.75rem;
     text-transform: uppercase;
+    width: max-content;
+
+    &.name:hover {
+      text-decoration: underline;
+    }
   }
 
   p {

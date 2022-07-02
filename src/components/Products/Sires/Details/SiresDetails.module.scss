@@ -69,4 +69,16 @@
       }
     }
   }
+
+  .modal_buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    svg {
+      cursor: pointer;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 }

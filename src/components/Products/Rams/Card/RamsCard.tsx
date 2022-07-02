@@ -6,19 +6,31 @@ import styles from './RamsCard.module.scss'
 
 const RamsCard: React.FC<{ ram: Ram }> = ({ ram }) => {
   return (
-    <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
-      <a className={styles.card}>
-        <Image
-          src={getStrapiMedia(ram.attributes.pictures.data)}
-          layout="responsive"
-          width={0}
-          height={0}
-          objectFit="cover"
-        />
-        <h1>{ram.attributes.name}</h1>
-        <p>{ram.attributes.description}</p>
-      </a>
-    </Link>
+    <div className={styles.card}>
+      {ram.attributes.sold && (
+        <div className={styles.sold_tag}>
+          <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
+        </div>
+      )}
+      <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
+        <a className={styles.image_container}>
+          <Image
+            src={getStrapiMedia(ram.attributes.pictures.data)}
+            layout="responsive"
+            width={0}
+            height={0}
+            objectFit="cover"
+          />
+        </a>
+      </Link>
+      <h1 className={styles.name}>
+        <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
+          <a>{ram.attributes.name}</a>
+        </Link>
+      </h1>
+      <h1>{ram.attributes.dateOfBirth}</h1>
+      <h1>{ram.attributes.weight}lb</h1>
+    </div>
   )
 }
 

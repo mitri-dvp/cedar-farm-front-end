@@ -1,25 +1,47 @@
 .card {
-  background-color: darken(#ffffff, 10);
-  padding: 2rem;
+  background-color: darken(#ffffff, 0);
   color: #231f20;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100px 6fr 2fr 1fr;
+  align-items: center;
   gap: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 1rem;
+  position: relative;
+
+  &:nth-child(even) {
+    background-color: darken(#ffffff, 5);
+  }
+
+  .image_container {
+    width: 100px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .sold_tag {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    img {
+      border: 0 !important;
+      background-color: transparent;
+    }
+  }
 
   img {
-    border-radius: 50%;
     border: 2px solid darken(#ffffff, 100) !important;
     background-color: #fff;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-transform: uppercase;
-    text-align: center;
+    width: max-content;
+
+    &.name:hover {
+      text-decoration: underline;
+    }
   }
 
   p {
