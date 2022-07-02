@@ -38,13 +38,13 @@ const CommercialSheepsDetails: React.FC<{ sheep: CommercialSheep }> = ({
           </h1>
           <p>{sheep.attributes.description}</p>
           <h2>
-            Born:{' '}
+            Date of Birth:{' '}
             <span>
               {dayjs(sheep.attributes.dateOfBirth).format('MM/DD/YYYY')}
             </span>
           </h2>
           <h2>
-            Weigth: <span>{sheep.attributes.weight}</span>
+            Weigth: <span>{sheep.attributes.weight}lb</span>
           </h2>
           <h2>
             Price: <span>{sheep.attributes.price}</span>

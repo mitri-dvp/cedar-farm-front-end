@@ -10,8 +10,6 @@ const SireDetails: React.FC<{ sire: Sire }> = ({ sire }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const sires: APIResponse = await fetchAPI('/api/sires', '&populate=*')
 
-  console.log('sires', sires)
-
   return {
     paths: sires.data.map((sire: Sire) => ({
       params: { slug: sire.attributes.slug, id: sire.id }
@@ -31,8 +29,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `/api/sires`,
     `&populate=*` + `&filters[slug][$eq]=${slug}`
   )
-
-  console.log('sire', sire)
 
   return {
     props: {

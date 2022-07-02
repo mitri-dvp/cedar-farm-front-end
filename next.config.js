@@ -11,7 +11,12 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ['kjhdorpersheep.com', 'www.agdaily.com', 'localhost']
+    domains: [
+      'kjhdorpersheep.com',
+      'www.agdaily.com',
+      'localhost',
+      'res.cloudinary.com'
+    ]
   }
 }
 

@@ -36,13 +36,13 @@ const EwesDetails: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
           </h1>
           <p>{ewe.attributes.description}</p>
           <h2>
-            Born:{' '}
+            Date of Birth:{' '}
             <span>
               {dayjs(ewe.attributes.dateOfBirth).format('MM/DD/YYYY')}
             </span>
           </h2>
           <h2>
-            Weigth: <span>{ewe.attributes.weight}</span>
+            Weigth: <span>{ewe.attributes.weight}lb</span>
           </h2>
           <h2>
             Price: <span>{ewe.attributes.price}</span>

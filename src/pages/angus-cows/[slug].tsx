@@ -10,8 +10,6 @@ const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const cows: APIResponse = await fetchAPI('/api/angus-cows', '&populate=*')
 
-  console.log('COWS', cows)
-
   return {
     paths: cows.data.map((cow: AngusCow) => ({
       params: { slug: cow.attributes.slug, id: cow.id }
@@ -31,8 +29,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `/api/angus-cows`,
     `&populate=*` + `&filters[slug][$eq]=${slug}`
   )
-
-  console.log('COW', cow)
 
   return {
     props: {

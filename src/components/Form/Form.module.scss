@@ -10,11 +10,7 @@
 
     label {
       cursor: pointer;
-      width: calc(50% - 0.5rem);
-
-      &:last-child {
-        width: 100%;
-      }
+      width: 100%;
 
       span {
         text-transform: uppercase;
@@ -22,6 +18,11 @@
         display: block;
         margin-bottom: 0.25rem;
         font-size: 0.9rem;
+
+        &.error {
+          color: red;
+          text-transform: none;
+        }
       }
 
       textarea,
@@ -43,7 +44,6 @@
     font-size: 1rem;
     text-transform: uppercase;
     font-family: inherit;
-
     background-color: darken(#44a347, $amount: 15);
     text-shadow: 3px 0px 2px #231f2050, -3px 0px 2px #231f2050,
       0px 4px 2px #231f2050;
@@ -55,5 +55,9 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }

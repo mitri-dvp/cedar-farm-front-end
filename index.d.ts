@@ -53,3 +53,9 @@ type CommercialSheep = Product
 type Ewe = Product
 type Ram = Product
 type Sire = Product
+
+type FormValidationFields = {
+  name: string
+  email: string
+  message: string
+}

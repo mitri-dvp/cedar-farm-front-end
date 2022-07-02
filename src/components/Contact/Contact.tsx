@@ -1,7 +1,7 @@
 import styles from './Contact.module.scss'
 
 import Form from '@components/Form'
-import { InstagramSVG, PhoneSVG } from '@components/SVG'
+import { InstagramSVG } from '@components/SVG'
 
 const Contact: React.FC = () => {
   return (
@@ -18,23 +18,13 @@ const Contact: React.FC = () => {
             <br />
             <h1>Contact Info</h1>
             <div>
-              <InstagramSVG />
               <a
                 href="https://www.instagram.com/cedarfarmsc/"
                 target="_blank"
                 rel="noreferrer"
               >
+                <InstagramSVG />
                 @cedarfarmsc
-              </a>
-            </div>
-            <div>
-              <PhoneSVG />
-              <a
-                href="https://www.instagram.com/cedarfarmsc/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                (201) 555-5555
               </a>
             </div>
           </div>

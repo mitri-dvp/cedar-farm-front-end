@@ -36,13 +36,13 @@ const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
           </h1>
           <p>{cow.attributes.description}</p>
           <h2>
-            Born:{' '}
+            Date of Birth:{' '}
             <span>
               {dayjs(cow.attributes.dateOfBirth).format('MM/DD/YYYY')}
             </span>
           </h2>
           <h2>
-            Weigth: <span>{cow.attributes.weight}</span>
+            Weigth: <span>{cow.attributes.weight}lb</span>
           </h2>
           <h2>
             Price: <span>{cow.attributes.price}</span>

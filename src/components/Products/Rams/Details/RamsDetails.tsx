@@ -36,13 +36,13 @@ const RamsDetails: React.FC<{ ram: Ram }> = ({ ram }) => {
           </h1>
           <p>{ram.attributes.description}</p>
           <h2>
-            Born:{' '}
+            Date of Birth:{' '}
             <span>
               {dayjs(ram.attributes.dateOfBirth).format('MM/DD/YYYY')}
             </span>
           </h2>
           <h2>
-            Weigth: <span>{ram.attributes.weight}</span>
+            Weigth: <span>{ram.attributes.weight}lb</span>
           </h2>
           <h2>
             Price: <span>{ram.attributes.price}</span>

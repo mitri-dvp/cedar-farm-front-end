@@ -12,8 +12,6 @@ export async function fetchAPI(path = '', params = '') {
     `&sort[0]=id:asc` +
     `&${params}`
 
-  console.log('FINAL URL', finalURL)
-
   const res = await fetch(finalURL)
   return await res.json()
 }
