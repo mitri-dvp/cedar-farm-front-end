@@ -9,7 +9,7 @@ const AngusCowsList: React.FC<{ cows: AngusCow[] }> = ({ cows }) => {
       <div className={styles.header}>
         <h1></h1>
         <h1>Name</h1>
-        <h1>Date of Birth</h1>
+        <h1>Born</h1>
         <h1>Weight</h1>
       </div>
       <div className={styles.list}>

@@ -8,9 +8,11 @@ const RamsCard: React.FC<{ ram: Ram }> = ({ ram }) => {
   return (
     <div className={styles.card}>
       {ram.attributes.sold && (
-        <div className={styles.sold_tag}>
-          <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
-        </div>
+        <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
+          <a className={styles.sold_tag}>
+            <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
+          </a>
+        </Link>
       )}
       <Link href={`/sheeps/rams/${ram.attributes.slug}`}>
         <a className={styles.image_container}>

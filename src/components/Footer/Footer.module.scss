@@ -64,4 +64,29 @@
       }
     }
   }
+
+  @media (max-width: 576px) {
+    > div {
+      text-align: center;
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        .logos {
+          display: grid;
+          gap: 1rem;
+          justify-content: center;
+          a {
+            width: max-content;
+            margin: auto;
+          }
+        }
+        .address,
+        .contact {
+          margin: auto;
+          width: max-content;
+        }
+      }
+    }
+  }
 }

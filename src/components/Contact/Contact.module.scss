@@ -66,4 +66,23 @@
       }
     }
   }
+
+  @media (max-width: 576px) {
+    > div {
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        form {
+          order: -1;
+        }
+
+        .address {
+          width: max-content;
+          margin: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

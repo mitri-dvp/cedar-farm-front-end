@@ -8,9 +8,11 @@ const AngusCowsCard: React.FC<{ cow: AngusCow }> = ({ cow }) => {
   return (
     <div className={styles.card}>
       {cow.attributes.sold && (
-        <div className={styles.sold_tag}>
-          <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
-        </div>
+        <Link href={`/angus-cows/${cow.attributes.slug}`}>
+          <a className={styles.sold_tag}>
+            <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
+          </a>
+        </Link>
       )}
       <Link href={`/angus-cows/${cow.attributes.slug}`}>
         <a className={styles.image_container}>

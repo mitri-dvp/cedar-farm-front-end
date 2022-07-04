@@ -47,4 +47,15 @@
   p {
     font-weight: normal;
   }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 50px 4fr 2fr 1fr;
+    padding: 0.5rem;
+    h1 {
+      font-size: 1.25rem;
+    }
+    .image_container {
+      width: 50px;
+    }
+  }
 }

@@ -8,9 +8,11 @@ const EwesCard: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
   return (
     <div className={styles.card}>
       {ewe.attributes.sold && (
-        <div className={styles.sold_tag}>
-          <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
-        </div>
+        <Link href={`/sheeps/ewes/${ewe.attributes.slug}`}>
+          <a className={styles.sold_tag}>
+            <Image src={'/sold.svg'} layout="responsive" width={0} height={0} />
+          </a>
+        </Link>
       )}
       <Link href={`/sheeps/ewes/${ewe.attributes.slug}`}>
         <a className={styles.image_container}>
