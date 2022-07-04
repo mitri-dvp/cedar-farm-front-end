@@ -35,6 +35,8 @@
     }
 
     .main_image {
+      position: relative;
+
       img {
         border: 2px solid darken(#ffffff, 100) !important;
         background-color: #fff;
@@ -46,6 +48,19 @@
 
       p {
         font-weight: normal;
+      }
+
+      .sold_tag {
+        position: absolute;
+        top: 0;
+        transform: translate(-15%, -25%);
+        z-index: 1;
+        width: 150px;
+
+        img {
+          border: 0 !important;
+          background-color: transparent;
+        }
       }
     }
   }

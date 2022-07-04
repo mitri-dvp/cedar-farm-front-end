@@ -61,6 +61,16 @@ const RamsDetails: React.FC<{ ram: Ram }> = ({ ram }) => {
           <h2></h2>
         </div>
         <div className={styles.main_image}>
+          {ram.attributes.sold && (
+            <div className={styles.sold_tag}>
+              <Image
+                src={'/sold.svg'}
+                layout="responsive"
+                width={0}
+                height={0}
+              />
+            </div>
+          )}
           <Image
             onClick={() => {
               setShowModal(true)

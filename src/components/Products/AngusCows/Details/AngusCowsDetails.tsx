@@ -61,6 +61,16 @@ const AngusCowsDetails: React.FC<{ cow: AngusCow }> = ({ cow }) => {
           <h2></h2>
         </div>
         <div className={styles.main_image}>
+          {cow.attributes.sold && (
+            <div className={styles.sold_tag}>
+              <Image
+                src={'/sold.svg'}
+                layout="responsive"
+                width={0}
+                height={0}
+              />
+            </div>
+          )}
           <Image
             onClick={() => {
               setShowModal(true)

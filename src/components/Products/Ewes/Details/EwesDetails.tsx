@@ -61,6 +61,16 @@ const EwesDetails: React.FC<{ ewe: Ewe }> = ({ ewe }) => {
           <h2></h2>
         </div>
         <div className={styles.main_image}>
+          {ewe.attributes.sold && (
+            <div className={styles.sold_tag}>
+              <Image
+                src={'/sold.svg'}
+                layout="responsive"
+                width={0}
+                height={0}
+              />
+            </div>
+          )}
           <Image
             onClick={() => {
               setShowModal(true)

@@ -63,6 +63,16 @@ const CommercialSheepsDetails: React.FC<{ sheep: CommercialSheep }> = ({
           <h2></h2>
         </div>
         <div className={styles.main_image}>
+          {sheep.attributes.sold && (
+            <div className={styles.sold_tag}>
+              <Image
+                src={'/sold.svg'}
+                layout="responsive"
+                width={0}
+                height={0}
+              />
+            </div>
+          )}
           <Image
             onClick={() => {
               setShowModal(true)
