@@ -97,12 +97,24 @@ const Header: React.FC = () => {
             <ul className={styles.mobile_list}>
               <li>
                 <Link href="/">
-                  <a>Home</a>
+                  <a
+                    onClick={() => {
+                      setShowMobileNav(false)
+                    }}
+                  >
+                    Home
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/sires">
-                  <a>Sires</a>
+                  <a
+                    onClick={() => {
+                      setShowMobileNav(false)
+                    }}
+                  >
+                    Sires
+                  </a>
                 </Link>
               </li>
               <li className={styles.dropdown}>
@@ -116,17 +128,35 @@ const Header: React.FC = () => {
                   >
                     <li>
                       <Link href="/sheeps/rams">
-                        <a>Rams</a>
+                        <a
+                          onClick={() => {
+                            setShowMobileNav(false)
+                          }}
+                        >
+                          Rams
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/sheeps/ewes">
-                        <a>Ewes</a>
+                        <a
+                          onClick={() => {
+                            setShowMobileNav(false)
+                          }}
+                        >
+                          Ewes
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/sheeps/commercial-sheeps">
-                        <a>Commercial</a>
+                        <a
+                          onClick={() => {
+                            setShowMobileNav(false)
+                          }}
+                        >
+                          Commercial
+                        </a>
                       </Link>
                     </li>
                   </ul>
@@ -134,12 +164,24 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <Link href="/angus-cows">
-                  <a>Angus Cows</a>
+                  <a
+                    onClick={() => {
+                      setShowMobileNav(false)
+                    }}
+                  >
+                    Angus Cows
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a>Contact Us</a>
+                  <a
+                    onClick={() => {
+                      setShowMobileNav(false)
+                    }}
+                  >
+                    Contact Us
+                  </a>
                 </Link>
               </li>
             </ul>
